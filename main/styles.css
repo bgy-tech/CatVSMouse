@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    border: 8px dotted yellow;
+    background-color: rgb(205, 190, 50);
+    
+}
+
+h1 {
+    color: #281c00;
+    text-align: center;
+    padding: 20px;
+    
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;/*it moves to next line if horizontally not enough space*/
+    justify-content: space-around
+}
+
+p {
+    text-align: center;
+    
+    width: 500px;
+    margin: 0 auto;
+    color: #250606;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Stage (playing area) */
+#stage {
+    width: 1000px;
+    height: 680px;
+    border: 2px solid #333;
+    margin: 5px auto;
+    position: relative;   /* children with absolute positioning are relative to this */
+    background: #f5f5f5;
+    overflow: hidden;
+
+
+}
+
+/* The mouse (player) — much smaller than stage */
+#player {
+    border: 1px solid red;
+    position: absolute;
+    width: 80px;            /* small so it can move inside stage */
+    height: 80px;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    background-image: url("https://vidreiros.org.br/novo/wp-content/uploads/2023/06/Rato-PNG.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    z-index: 2;            /* draw above the cat */
+}
+
+/* The cat — also reasonable size */
+#cat {
+    border: 1px solid rgb(0, 17, 255);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;           /* start cat on the right side */
+    top: 0;
+    background-image: url("https://pngimg.com/uploads/cat/cat_PNG111.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;            /* behind the player */
+}
+#Gameoverpopup.hidden {
+    display: none;
+}
+#Gameoverpopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure it's above other elements */
+}
+#Gameovercontent {
+    background-color: rgba(232, 12, 12, 0.919);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#restartButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f413f9;
+    color: rgb(25, 2, 2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

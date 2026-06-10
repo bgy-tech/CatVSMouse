@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CatVSMouse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cat vs Mouse</h1>
+    <p>RUN before the cat catches you!</p>
+
+    <div id="stage" tabindex="0">
+        <div id="cat"></div>
+        <div id="player"></div>
+    </div>
+
+    <div id="Gameoverpopup"  class="hidden">
+        <div id="Gameovercontent">
+            <h2>Game Over!</h2>
+            <p>The cat has caught you!</p>
+            <button id="restartButton">Restart Game</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
